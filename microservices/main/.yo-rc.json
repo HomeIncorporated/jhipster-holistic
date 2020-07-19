@@ -54,10 +54,6 @@
         "version": "1.0.3"
       },
       {
-        "name": "generator-jhipster-testcontainers",
-        "version": "1.1.0"
-      },
-      {
         "name": "generator-jhipster-stripe-payment",
         "version": "1.0.9"
       },
@@ -116,6 +112,14 @@
       {
         "name": "generator-jhipster-aeropost",
         "version": "1.14.0"
+      },
+      {
+        "name": "generator-jhipster-testcontainers",
+        "version": "1.1.0"
+      },
+      {
+        "name": "generator-jhipster-tenantview",
+        "version": "latest"
       }
     ],
     "enableTranslation": true,
@@ -127,7 +131,12 @@
       "fr",
       "de"
     ],
-    "blueprints": [],
+    "blueprints": [
+      {
+        "name": "generator-jhipster-tenantview",
+        "version": "latest"
+      }
+    ],
     "skipClient": true,
     "skipUserManagement": true
   }

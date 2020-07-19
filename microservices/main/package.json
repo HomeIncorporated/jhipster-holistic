@@ -13,7 +13,6 @@
     "generator-jhipster-spring-cloud-stream": "1.0.0",
     "generator-jhipster-standalone-profile": "2.3.0",
     "generator-jhipster-audit-helper": "1.0.3",
-    "generator-jhipster-testcontainers": "1.1.0",
     "generator-jhipster-stripe-payment": "1.0.9",
     "generator-jhipster-paypal": "1.0.5",
     "generator-jhipster-uaa-security-authority": "1.0.1",
@@ -29,6 +28,8 @@
     "generator-jhipster-vmware-clarity": "1.1.1",
     "generator-jhipster-cockroachdb": "0.0.10",
     "generator-jhipster-aeropost": "1.14.0",
+    "generator-jhipster-testcontainers": "1.1.0",
+    "generator-jhipster-tenantview": "latest",
     "generator-jhipster": "6.4.1",
     "@openapitools/openapi-generator-cli": "0.0.14-4.0.2"
   },
