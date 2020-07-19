@@ -1,0 +1,95 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="gatewayApp.jobHistory.home.title">Job Histories</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-job-history-my-suffix" [routerLink]="['/job-history-my-suffix/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span class="hidden-sm-down"  jhiTranslate="gatewayApp.jobHistory.home.createLabel">
+            Create a new Job History
+            </span>
+        </button>
+    </h2>
+    <jhi-alert-error></jhi-alert-error>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="{{ 'gatewayApp.jobHistory.home.search' | translate }}">
+                    <button class="input-group-append btn btn-info" (click)="search(currentSearch)">
+                        <fa-icon [icon]="'search'"></fa-icon>
+                    </button>
+                    <button class="input-group-append btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                        <fa-icon [icon]="'trash-alt'"></fa-icon>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br/>
+    <div class="alert alert-warning" *ngIf="jobHistories?.length === 0">
+        <span jhiTranslate="gatewayApp.jobHistory.home.notFound">No jobHistories found</span>
+    </div>
+    <div class="table-responsive" *ngIf="jobHistories?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="reset.bind(this)">
+            <th scope="col"  jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="startDate"><span jhiTranslate="gatewayApp.jobHistory.startDate">Start Date</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="endDate"><span jhiTranslate="gatewayApp.jobHistory.endDate">End Date</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="language"><span jhiTranslate="gatewayApp.jobHistory.language">Language</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="job.id"><span jhiTranslate="gatewayApp.jobHistory.job">Job</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="department.id"><span jhiTranslate="gatewayApp.jobHistory.department">Department</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="employee.id"><span jhiTranslate="gatewayApp.jobHistory.employee">Employee</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody infinite-scroll (scrolled)="loadPage(page + 1)" [infiniteScrollDisabled]="page >= links['last']" [infiniteScrollDistance]="0">
+            <tr *ngFor="let jobHistory of jobHistories ;trackBy: trackId">
+                <td><a [routerLink]="['/job-history-my-suffix', jobHistory.id, 'view' ]">{{jobHistory.id}}</a></td>
+                <td>{{jobHistory.startDate | date:'medium'}}</td>
+                <td>{{jobHistory.endDate | date:'medium'}}</td>
+                <td jhiTranslate="{{'gatewayApp.Language.' + jobHistory.language}}">{{jobHistory.language}}</td>
+                <td>
+                    <div *ngIf="jobHistory.job">
+                        <a [routerLink]="['/job-my-suffix', jobHistory.job?.id, 'view' ]" >{{jobHistory.job?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="jobHistory.department">
+                        <a [routerLink]="['/department-my-suffix', jobHistory.department?.id, 'view' ]" >{{jobHistory.department?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="jobHistory.employee">
+                        <a [routerLink]="['/employee-my-suffix', jobHistory.employee?.id, 'view' ]" >{{jobHistory.employee?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/job-history-my-suffix', jobHistory.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/job-history-my-suffix', jobHistory.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/job-history-my-suffix', { outlets: { popup: jobHistory.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

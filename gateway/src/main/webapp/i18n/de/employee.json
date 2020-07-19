@@ -1,0 +1,35 @@
+{
+  "gatewayApp": {
+    "employee": {
+      "home": {
+        "title": "Employees",
+        "createLabel": "Employee erstellen",
+        "createOrEditLabel": "Employee erstellen oder bearbeiten",
+        "search": "Suche nach Employee",
+        "notFound": "No Employees found"
+      },
+      "created": "Employee erstellt mit ID {{ param }}",
+      "updated": "Employee aktualisiert mit ID {{ param }}",
+      "deleted": "Employee gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Employee {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Employee"
+      },
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "phoneNumber": "Phone Number",
+      "hireDate": "Hire Date",
+      "salary": "Salary",
+      "commissionPct": "Commission Pct",
+      "department": "Department",
+      "job": "Job",
+      "manager": "Manager",
+      "help": {
+        "firstName": "The firstname attribute."
+      }
+    }
+  }
+}

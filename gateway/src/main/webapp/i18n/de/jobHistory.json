@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "jobHistory": {
+      "home": {
+        "title": "Job Histories",
+        "createLabel": "Job History erstellen",
+        "createOrEditLabel": "Job History erstellen oder bearbeiten",
+        "search": "Suche nach Job History",
+        "notFound": "No Job Histories found"
+      },
+      "created": "Job History erstellt mit ID {{ param }}",
+      "updated": "Job History aktualisiert mit ID {{ param }}",
+      "deleted": "Job History gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Job History {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Job History"
+      },
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "language": "Language",
+      "job": "Job",
+      "department": "Department",
+      "employee": "Employee"
+    }
+  }
+}
