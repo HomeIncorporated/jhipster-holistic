@@ -6,6 +6,14 @@ import { connect } from 'react-redux'
 import RoundedButton from '../../shared/components/rounded-button/rounded-button'
 import {
   loginScreen,
+  regionEntityScreen,
+  countryEntityScreen,
+  locationEntityScreen,
+  departmentEntityScreen,
+  taskEntityScreen,
+  employeeEntityScreen,
+  jobEntityScreen,
+  jobHistoryEntityScreen,
   // ignite-jhipster-entity-screen-import-needle
 } from '../../navigation/layouts'
 /* eslint-enable */
@@ -17,6 +25,14 @@ class EntitiesScreen extends React.Component {
     return (
       <ScrollView style={styles.container} testID="entityScreenScrollList">
         <Text style={styles.centerText}>JHipster Entities will appear below</Text>
+        <RoundedButton text="Region" onPress={regionEntityScreen} testID="regionEntityScreenButton" />
+        <RoundedButton text="Country" onPress={countryEntityScreen} testID="countryEntityScreenButton" />
+        <RoundedButton text="Location" onPress={locationEntityScreen} testID="locationEntityScreenButton" />
+        <RoundedButton text="Department" onPress={departmentEntityScreen} testID="departmentEntityScreenButton" />
+        <RoundedButton text="Task" onPress={taskEntityScreen} testID="taskEntityScreenButton" />
+        <RoundedButton text="Employee" onPress={employeeEntityScreen} testID="employeeEntityScreenButton" />
+        <RoundedButton text="Job" onPress={jobEntityScreen} testID="jobEntityScreenButton" />
+        <RoundedButton text="JobHistory" onPress={jobHistoryEntityScreen} testID="jobHistoryEntityScreenButton" />
         {/* ignite-jhipster-entity-screen-needle */}
       </ScrollView>
     )

@@ -12,6 +12,14 @@ import { RegisterTypes } from '../../modules/account/register/register.reducer'
 import { ForgotPasswordTypes } from '../../modules/account/password-reset/forgot-password.reducer'
 import { ChangePasswordTypes } from '../../modules/account/password/change-password.reducer'
 import { UserTypes } from '../../shared/reducers/user.reducer'
+import { RegionTypes } from '../../modules/entities/region/region.reducer'
+import { CountryTypes } from '../../modules/entities/country/country.reducer'
+import { LocationTypes } from '../../modules/entities/location/location.reducer'
+import { DepartmentTypes } from '../../modules/entities/department/department.reducer'
+import { TaskTypes } from '../../modules/entities/task/task.reducer'
+import { EmployeeTypes } from '../../modules/entities/employee/employee.reducer'
+import { JobTypes } from '../../modules/entities/job/job.reducer'
+import { JobHistoryTypes } from '../../modules/entities/job-history/job-history.reducer'
 // ignite-jhipster-saga-redux-import-needle
 
 /* ------------- Sagas ------------- */
@@ -23,6 +31,26 @@ import { forgotPassword } from '../../modules/account/password-reset/forgot-pass
 import { changePassword } from '../../modules/account/password/change-password.sagas'
 import { getAccount, updateAccount } from '../../shared/sagas/account.sagas'
 import { getUser, getUsers, updateUser, deleteUser } from '../../shared/sagas/user.sagas'
+import { getRegion, getRegions, updateRegion, deleteRegion, searchRegions } from '../../modules/entities/region/region.sagas'
+import { getCountry, getCountries, updateCountry, deleteCountry, searchCountries } from '../../modules/entities/country/country.sagas'
+import { getLocation, getLocations, updateLocation, deleteLocation, searchLocations } from '../../modules/entities/location/location.sagas'
+import {
+  getDepartment,
+  getDepartments,
+  updateDepartment,
+  deleteDepartment,
+  searchDepartments,
+} from '../../modules/entities/department/department.sagas'
+import { getTask, getTasks, updateTask, deleteTask, searchTasks } from '../../modules/entities/task/task.sagas'
+import { getEmployee, getEmployees, updateEmployee, deleteEmployee, searchEmployees } from '../../modules/entities/employee/employee.sagas'
+import { getJob, getJobs, updateJob, deleteJob, searchJobs } from '../../modules/entities/job/job.sagas'
+import {
+  getJobHistory,
+  getJobHistories,
+  updateJobHistory,
+  deleteJobHistory,
+  searchJobHistories,
+} from '../../modules/entities/job-history/job-history.sagas'
 // ignite-jhipster-saga-method-import-needle
 
 /* ------------- API ------------- */
@@ -44,6 +72,54 @@ export default function* root() {
     takeLatest(RegisterTypes.REGISTER_REQUEST, register, api),
     takeLatest(ForgotPasswordTypes.FORGOT_PASSWORD_REQUEST, forgotPassword, api),
     takeLatest(ChangePasswordTypes.CHANGE_PASSWORD_REQUEST, changePassword, api),
+
+    takeLatest(RegionTypes.REGION_REQUEST, getRegion, api),
+    takeLatest(RegionTypes.REGION_ALL_REQUEST, getRegions, api),
+    takeLatest(RegionTypes.REGION_UPDATE_REQUEST, updateRegion, api),
+    takeLatest(RegionTypes.REGION_DELETE_REQUEST, deleteRegion, api),
+    takeLatest(RegionTypes.REGION_SEARCH_REQUEST, searchRegions, api),
+
+    takeLatest(CountryTypes.COUNTRY_REQUEST, getCountry, api),
+    takeLatest(CountryTypes.COUNTRY_ALL_REQUEST, getCountries, api),
+    takeLatest(CountryTypes.COUNTRY_UPDATE_REQUEST, updateCountry, api),
+    takeLatest(CountryTypes.COUNTRY_DELETE_REQUEST, deleteCountry, api),
+    takeLatest(CountryTypes.COUNTRY_SEARCH_REQUEST, searchCountries, api),
+
+    takeLatest(LocationTypes.LOCATION_REQUEST, getLocation, api),
+    takeLatest(LocationTypes.LOCATION_ALL_REQUEST, getLocations, api),
+    takeLatest(LocationTypes.LOCATION_UPDATE_REQUEST, updateLocation, api),
+    takeLatest(LocationTypes.LOCATION_DELETE_REQUEST, deleteLocation, api),
+    takeLatest(LocationTypes.LOCATION_SEARCH_REQUEST, searchLocations, api),
+
+    takeLatest(DepartmentTypes.DEPARTMENT_REQUEST, getDepartment, api),
+    takeLatest(DepartmentTypes.DEPARTMENT_ALL_REQUEST, getDepartments, api),
+    takeLatest(DepartmentTypes.DEPARTMENT_UPDATE_REQUEST, updateDepartment, api),
+    takeLatest(DepartmentTypes.DEPARTMENT_DELETE_REQUEST, deleteDepartment, api),
+    takeLatest(DepartmentTypes.DEPARTMENT_SEARCH_REQUEST, searchDepartments, api),
+
+    takeLatest(TaskTypes.TASK_REQUEST, getTask, api),
+    takeLatest(TaskTypes.TASK_ALL_REQUEST, getTasks, api),
+    takeLatest(TaskTypes.TASK_UPDATE_REQUEST, updateTask, api),
+    takeLatest(TaskTypes.TASK_DELETE_REQUEST, deleteTask, api),
+    takeLatest(TaskTypes.TASK_SEARCH_REQUEST, searchTasks, api),
+
+    takeLatest(EmployeeTypes.EMPLOYEE_REQUEST, getEmployee, api),
+    takeLatest(EmployeeTypes.EMPLOYEE_ALL_REQUEST, getEmployees, api),
+    takeLatest(EmployeeTypes.EMPLOYEE_UPDATE_REQUEST, updateEmployee, api),
+    takeLatest(EmployeeTypes.EMPLOYEE_DELETE_REQUEST, deleteEmployee, api),
+    takeLatest(EmployeeTypes.EMPLOYEE_SEARCH_REQUEST, searchEmployees, api),
+
+    takeLatest(JobTypes.JOB_REQUEST, getJob, api),
+    takeLatest(JobTypes.JOB_ALL_REQUEST, getJobs, api),
+    takeLatest(JobTypes.JOB_UPDATE_REQUEST, updateJob, api),
+    takeLatest(JobTypes.JOB_DELETE_REQUEST, deleteJob, api),
+    takeLatest(JobTypes.JOB_SEARCH_REQUEST, searchJobs, api),
+
+    takeLatest(JobHistoryTypes.JOB_HISTORY_REQUEST, getJobHistory, api),
+    takeLatest(JobHistoryTypes.JOB_HISTORY_ALL_REQUEST, getJobHistories, api),
+    takeLatest(JobHistoryTypes.JOB_HISTORY_UPDATE_REQUEST, updateJobHistory, api),
+    takeLatest(JobHistoryTypes.JOB_HISTORY_DELETE_REQUEST, deleteJobHistory, api),
+    takeLatest(JobHistoryTypes.JOB_HISTORY_SEARCH_REQUEST, searchJobHistories, api),
     // ignite-jhipster-saga-redux-connect-needle
 
     takeLatest(UserTypes.USER_REQUEST, getUser, api),

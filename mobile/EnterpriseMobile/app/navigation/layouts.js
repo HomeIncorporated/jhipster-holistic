@@ -17,6 +17,30 @@ import ForgotPasswordScreen from '../modules/account/password-reset/forgot-passw
 import ChangePasswordScreen from '../modules/account/password/change-password-screen'
 import EntitiesScreen from '../modules/entities/entities-screen'
 import StorybookScreen from '../../storybook'
+import RegionEntityScreen from '../modules/entities/region/region-entity-screen'
+import RegionEntityDetailScreen from '../modules/entities/region/region-entity-detail-screen'
+import RegionEntityEditScreen from '../modules/entities/region/region-entity-edit-screen'
+import CountryEntityScreen from '../modules/entities/country/country-entity-screen'
+import CountryEntityDetailScreen from '../modules/entities/country/country-entity-detail-screen'
+import CountryEntityEditScreen from '../modules/entities/country/country-entity-edit-screen'
+import LocationEntityScreen from '../modules/entities/location/location-entity-screen'
+import LocationEntityDetailScreen from '../modules/entities/location/location-entity-detail-screen'
+import LocationEntityEditScreen from '../modules/entities/location/location-entity-edit-screen'
+import DepartmentEntityScreen from '../modules/entities/department/department-entity-screen'
+import DepartmentEntityDetailScreen from '../modules/entities/department/department-entity-detail-screen'
+import DepartmentEntityEditScreen from '../modules/entities/department/department-entity-edit-screen'
+import TaskEntityScreen from '../modules/entities/task/task-entity-screen'
+import TaskEntityDetailScreen from '../modules/entities/task/task-entity-detail-screen'
+import TaskEntityEditScreen from '../modules/entities/task/task-entity-edit-screen'
+import EmployeeEntityScreen from '../modules/entities/employee/employee-entity-screen'
+import EmployeeEntityDetailScreen from '../modules/entities/employee/employee-entity-detail-screen'
+import EmployeeEntityEditScreen from '../modules/entities/employee/employee-entity-edit-screen'
+import JobEntityScreen from '../modules/entities/job/job-entity-screen'
+import JobEntityDetailScreen from '../modules/entities/job/job-entity-detail-screen'
+import JobEntityEditScreen from '../modules/entities/job/job-entity-edit-screen'
+import JobHistoryEntityScreen from '../modules/entities/job-history/job-history-entity-screen'
+import JobHistoryEntityDetailScreen from '../modules/entities/job-history/job-history-entity-detail-screen'
+import JobHistoryEntityEditScreen from '../modules/entities/job-history/job-history-entity-edit-screen'
 // ignite-jhipster-navigation-import-needle
 
 export const LOGIN_SCREEN = 'nav.LoginScreen'
@@ -28,6 +52,30 @@ export const LAUNCH_SCREEN = 'nav.LaunchScreen'
 export const DRAWER_CONTENT = 'nav.DrawerContent'
 export const ENTITIES_SCREEN = 'nav.EntitiesScreen'
 export const STORYBOOK_SCREEN = 'nav.StorybookScreen'
+export const REGION_ENTITY_SCREEN = 'nav.RegionEntityScreen'
+export const REGION_ENTITY_DETAIL_SCREEN = 'nav.RegionEntityDetailScreen'
+export const REGION_ENTITY_EDIT_SCREEN = 'nav.RegionEntityEditScreen'
+export const COUNTRY_ENTITY_SCREEN = 'nav.CountryEntityScreen'
+export const COUNTRY_ENTITY_DETAIL_SCREEN = 'nav.CountryEntityDetailScreen'
+export const COUNTRY_ENTITY_EDIT_SCREEN = 'nav.CountryEntityEditScreen'
+export const LOCATION_ENTITY_SCREEN = 'nav.LocationEntityScreen'
+export const LOCATION_ENTITY_DETAIL_SCREEN = 'nav.LocationEntityDetailScreen'
+export const LOCATION_ENTITY_EDIT_SCREEN = 'nav.LocationEntityEditScreen'
+export const DEPARTMENT_ENTITY_SCREEN = 'nav.DepartmentEntityScreen'
+export const DEPARTMENT_ENTITY_DETAIL_SCREEN = 'nav.DepartmentEntityDetailScreen'
+export const DEPARTMENT_ENTITY_EDIT_SCREEN = 'nav.DepartmentEntityEditScreen'
+export const TASK_ENTITY_SCREEN = 'nav.TaskEntityScreen'
+export const TASK_ENTITY_DETAIL_SCREEN = 'nav.TaskEntityDetailScreen'
+export const TASK_ENTITY_EDIT_SCREEN = 'nav.TaskEntityEditScreen'
+export const EMPLOYEE_ENTITY_SCREEN = 'nav.EmployeeEntityScreen'
+export const EMPLOYEE_ENTITY_DETAIL_SCREEN = 'nav.EmployeeEntityDetailScreen'
+export const EMPLOYEE_ENTITY_EDIT_SCREEN = 'nav.EmployeeEntityEditScreen'
+export const JOB_ENTITY_SCREEN = 'nav.JobEntityScreen'
+export const JOB_ENTITY_DETAIL_SCREEN = 'nav.JobEntityDetailScreen'
+export const JOB_ENTITY_EDIT_SCREEN = 'nav.JobEntityEditScreen'
+export const JOB_HISTORY_ENTITY_SCREEN = 'nav.JobHistoryEntityScreen'
+export const JOB_HISTORY_ENTITY_DETAIL_SCREEN = 'nav.JobHistoryEntityDetailScreen'
+export const JOB_HISTORY_ENTITY_EDIT_SCREEN = 'nav.JobHistoryEntityEditScreen'
 // ignite-jhipster-navigation-declaration-needle
 
 const store = createStore()
@@ -115,6 +163,30 @@ export function registerScreensAndStartApp() {
   Navigation.registerComponentWithRedux(LAUNCH_SCREEN, () => LaunchScreen, Provider, store)
   Navigation.registerComponentWithRedux(ENTITIES_SCREEN, () => EntitiesScreen, Provider, store)
   Navigation.registerComponent(STORYBOOK_SCREEN, () => StorybookScreen)
+  Navigation.registerComponentWithRedux(REGION_ENTITY_SCREEN, () => RegionEntityScreen, Provider, store)
+  Navigation.registerComponentWithRedux(REGION_ENTITY_DETAIL_SCREEN, () => RegionEntityDetailScreen, Provider, store)
+  Navigation.registerComponentWithRedux(REGION_ENTITY_EDIT_SCREEN, () => RegionEntityEditScreen, Provider, store)
+  Navigation.registerComponentWithRedux(COUNTRY_ENTITY_SCREEN, () => CountryEntityScreen, Provider, store)
+  Navigation.registerComponentWithRedux(COUNTRY_ENTITY_DETAIL_SCREEN, () => CountryEntityDetailScreen, Provider, store)
+  Navigation.registerComponentWithRedux(COUNTRY_ENTITY_EDIT_SCREEN, () => CountryEntityEditScreen, Provider, store)
+  Navigation.registerComponentWithRedux(LOCATION_ENTITY_SCREEN, () => LocationEntityScreen, Provider, store)
+  Navigation.registerComponentWithRedux(LOCATION_ENTITY_DETAIL_SCREEN, () => LocationEntityDetailScreen, Provider, store)
+  Navigation.registerComponentWithRedux(LOCATION_ENTITY_EDIT_SCREEN, () => LocationEntityEditScreen, Provider, store)
+  Navigation.registerComponentWithRedux(DEPARTMENT_ENTITY_SCREEN, () => DepartmentEntityScreen, Provider, store)
+  Navigation.registerComponentWithRedux(DEPARTMENT_ENTITY_DETAIL_SCREEN, () => DepartmentEntityDetailScreen, Provider, store)
+  Navigation.registerComponentWithRedux(DEPARTMENT_ENTITY_EDIT_SCREEN, () => DepartmentEntityEditScreen, Provider, store)
+  Navigation.registerComponentWithRedux(TASK_ENTITY_SCREEN, () => TaskEntityScreen, Provider, store)
+  Navigation.registerComponentWithRedux(TASK_ENTITY_DETAIL_SCREEN, () => TaskEntityDetailScreen, Provider, store)
+  Navigation.registerComponentWithRedux(TASK_ENTITY_EDIT_SCREEN, () => TaskEntityEditScreen, Provider, store)
+  Navigation.registerComponentWithRedux(EMPLOYEE_ENTITY_SCREEN, () => EmployeeEntityScreen, Provider, store)
+  Navigation.registerComponentWithRedux(EMPLOYEE_ENTITY_DETAIL_SCREEN, () => EmployeeEntityDetailScreen, Provider, store)
+  Navigation.registerComponentWithRedux(EMPLOYEE_ENTITY_EDIT_SCREEN, () => EmployeeEntityEditScreen, Provider, store)
+  Navigation.registerComponentWithRedux(JOB_ENTITY_SCREEN, () => JobEntityScreen, Provider, store)
+  Navigation.registerComponentWithRedux(JOB_ENTITY_DETAIL_SCREEN, () => JobEntityDetailScreen, Provider, store)
+  Navigation.registerComponentWithRedux(JOB_ENTITY_EDIT_SCREEN, () => JobEntityEditScreen, Provider, store)
+  Navigation.registerComponentWithRedux(JOB_HISTORY_ENTITY_SCREEN, () => JobHistoryEntityScreen, Provider, store)
+  Navigation.registerComponentWithRedux(JOB_HISTORY_ENTITY_DETAIL_SCREEN, () => JobHistoryEntityDetailScreen, Provider, store)
+  Navigation.registerComponentWithRedux(JOB_HISTORY_ENTITY_EDIT_SCREEN, () => JobHistoryEntityEditScreen, Provider, store)
   // ignite-jhipster-navigation-registration-needle
 
   Navigation.events().registerAppLaunchedListener(() => {
@@ -257,4 +329,476 @@ export const storybookScreen = () => {
     },
   })
 }
+
+export const regionEntityScreen = () =>
+  Navigation.push('center', {
+    component: {
+      name: REGION_ENTITY_SCREEN,
+      options: {
+        topBar: {
+          title: {
+            text: 'Regions',
+            color: Colors.snow,
+          },
+          rightButtons: [
+            {
+              id: 'createButton',
+              text: 'Create',
+              color: Colors.snow,
+              testID: 'regionCreateButton',
+            },
+          ],
+        },
+      },
+    },
+  })
+
+export const regionEntityEditScreen = (data) =>
+  Navigation.push('center', {
+    component: {
+      name: REGION_ENTITY_EDIT_SCREEN,
+      passProps: {
+        data,
+      },
+      options: {
+        topBar: {
+          title: {
+            text: 'Regions',
+            color: Colors.snow,
+          },
+        },
+      },
+    },
+  })
+
+export const regionEntityDetailScreen = (data) =>
+  Navigation.push('center', {
+    component: {
+      name: REGION_ENTITY_DETAIL_SCREEN,
+      passProps: {
+        data,
+      },
+      options: {
+        topBar: {
+          title: {
+            text: 'Regions',
+            color: Colors.snow,
+          },
+        },
+      },
+    },
+  })
+
+export const countryEntityScreen = () =>
+  Navigation.push('center', {
+    component: {
+      name: COUNTRY_ENTITY_SCREEN,
+      options: {
+        topBar: {
+          title: {
+            text: 'Countries',
+            color: Colors.snow,
+          },
+          rightButtons: [
+            {
+              id: 'createButton',
+              text: 'Create',
+              color: Colors.snow,
+              testID: 'countryCreateButton',
+            },
+          ],
+        },
+      },
+    },
+  })
+
+export const countryEntityEditScreen = (data) =>
+  Navigation.push('center', {
+    component: {
+      name: COUNTRY_ENTITY_EDIT_SCREEN,
+      passProps: {
+        data,
+      },
+      options: {
+        topBar: {
+          title: {
+            text: 'Countries',
+            color: Colors.snow,
+          },
+        },
+      },
+    },
+  })
+
+export const countryEntityDetailScreen = (data) =>
+  Navigation.push('center', {
+    component: {
+      name: COUNTRY_ENTITY_DETAIL_SCREEN,
+      passProps: {
+        data,
+      },
+      options: {
+        topBar: {
+          title: {
+            text: 'Countries',
+            color: Colors.snow,
+          },
+        },
+      },
+    },
+  })
+
+export const locationEntityScreen = () =>
+  Navigation.push('center', {
+    component: {
+      name: LOCATION_ENTITY_SCREEN,
+      options: {
+        topBar: {
+          title: {
+            text: 'Locations',
+            color: Colors.snow,
+          },
+          rightButtons: [
+            {
+              id: 'createButton',
+              text: 'Create',
+              color: Colors.snow,
+              testID: 'locationCreateButton',
+            },
+          ],
+        },
+      },
+    },
+  })
+
+export const locationEntityEditScreen = (data) =>
+  Navigation.push('center', {
+    component: {
+      name: LOCATION_ENTITY_EDIT_SCREEN,
+      passProps: {
+        data,
+      },
+      options: {
+        topBar: {
+          title: {
+            text: 'Locations',
+            color: Colors.snow,
+          },
+        },
+      },
+    },
+  })
+
+export const locationEntityDetailScreen = (data) =>
+  Navigation.push('center', {
+    component: {
+      name: LOCATION_ENTITY_DETAIL_SCREEN,
+      passProps: {
+        data,
+      },
+      options: {
+        topBar: {
+          title: {
+            text: 'Locations',
+            color: Colors.snow,
+          },
+        },
+      },
+    },
+  })
+
+export const departmentEntityScreen = () =>
+  Navigation.push('center', {
+    component: {
+      name: DEPARTMENT_ENTITY_SCREEN,
+      options: {
+        topBar: {
+          title: {
+            text: 'Departments',
+            color: Colors.snow,
+          },
+          rightButtons: [
+            {
+              id: 'createButton',
+              text: 'Create',
+              color: Colors.snow,
+              testID: 'departmentCreateButton',
+            },
+          ],
+        },
+      },
+    },
+  })
+
+export const departmentEntityEditScreen = (data) =>
+  Navigation.push('center', {
+    component: {
+      name: DEPARTMENT_ENTITY_EDIT_SCREEN,
+      passProps: {
+        data,
+      },
+      options: {
+        topBar: {
+          title: {
+            text: 'Departments',
+            color: Colors.snow,
+          },
+        },
+      },
+    },
+  })
+
+export const departmentEntityDetailScreen = (data) =>
+  Navigation.push('center', {
+    component: {
+      name: DEPARTMENT_ENTITY_DETAIL_SCREEN,
+      passProps: {
+        data,
+      },
+      options: {
+        topBar: {
+          title: {
+            text: 'Departments',
+            color: Colors.snow,
+          },
+        },
+      },
+    },
+  })
+
+export const taskEntityScreen = () =>
+  Navigation.push('center', {
+    component: {
+      name: TASK_ENTITY_SCREEN,
+      options: {
+        topBar: {
+          title: {
+            text: 'Tasks',
+            color: Colors.snow,
+          },
+          rightButtons: [
+            {
+              id: 'createButton',
+              text: 'Create',
+              color: Colors.snow,
+              testID: 'taskCreateButton',
+            },
+          ],
+        },
+      },
+    },
+  })
+
+export const taskEntityEditScreen = (data) =>
+  Navigation.push('center', {
+    component: {
+      name: TASK_ENTITY_EDIT_SCREEN,
+      passProps: {
+        data,
+      },
+      options: {
+        topBar: {
+          title: {
+            text: 'Tasks',
+            color: Colors.snow,
+          },
+        },
+      },
+    },
+  })
+
+export const taskEntityDetailScreen = (data) =>
+  Navigation.push('center', {
+    component: {
+      name: TASK_ENTITY_DETAIL_SCREEN,
+      passProps: {
+        data,
+      },
+      options: {
+        topBar: {
+          title: {
+            text: 'Tasks',
+            color: Colors.snow,
+          },
+        },
+      },
+    },
+  })
+
+export const employeeEntityScreen = () =>
+  Navigation.push('center', {
+    component: {
+      name: EMPLOYEE_ENTITY_SCREEN,
+      options: {
+        topBar: {
+          title: {
+            text: 'Employees',
+            color: Colors.snow,
+          },
+          rightButtons: [
+            {
+              id: 'createButton',
+              text: 'Create',
+              color: Colors.snow,
+              testID: 'employeeCreateButton',
+            },
+          ],
+        },
+      },
+    },
+  })
+
+export const employeeEntityEditScreen = (data) =>
+  Navigation.push('center', {
+    component: {
+      name: EMPLOYEE_ENTITY_EDIT_SCREEN,
+      passProps: {
+        data,
+      },
+      options: {
+        topBar: {
+          title: {
+            text: 'Employees',
+            color: Colors.snow,
+          },
+        },
+      },
+    },
+  })
+
+export const employeeEntityDetailScreen = (data) =>
+  Navigation.push('center', {
+    component: {
+      name: EMPLOYEE_ENTITY_DETAIL_SCREEN,
+      passProps: {
+        data,
+      },
+      options: {
+        topBar: {
+          title: {
+            text: 'Employees',
+            color: Colors.snow,
+          },
+        },
+      },
+    },
+  })
+
+export const jobEntityScreen = () =>
+  Navigation.push('center', {
+    component: {
+      name: JOB_ENTITY_SCREEN,
+      options: {
+        topBar: {
+          title: {
+            text: 'Jobs',
+            color: Colors.snow,
+          },
+          rightButtons: [
+            {
+              id: 'createButton',
+              text: 'Create',
+              color: Colors.snow,
+              testID: 'jobCreateButton',
+            },
+          ],
+        },
+      },
+    },
+  })
+
+export const jobEntityEditScreen = (data) =>
+  Navigation.push('center', {
+    component: {
+      name: JOB_ENTITY_EDIT_SCREEN,
+      passProps: {
+        data,
+      },
+      options: {
+        topBar: {
+          title: {
+            text: 'Jobs',
+            color: Colors.snow,
+          },
+        },
+      },
+    },
+  })
+
+export const jobEntityDetailScreen = (data) =>
+  Navigation.push('center', {
+    component: {
+      name: JOB_ENTITY_DETAIL_SCREEN,
+      passProps: {
+        data,
+      },
+      options: {
+        topBar: {
+          title: {
+            text: 'Jobs',
+            color: Colors.snow,
+          },
+        },
+      },
+    },
+  })
+
+export const jobHistoryEntityScreen = () =>
+  Navigation.push('center', {
+    component: {
+      name: JOB_HISTORY_ENTITY_SCREEN,
+      options: {
+        topBar: {
+          title: {
+            text: 'JobHistories',
+            color: Colors.snow,
+          },
+          rightButtons: [
+            {
+              id: 'createButton',
+              text: 'Create',
+              color: Colors.snow,
+              testID: 'jobHistoryCreateButton',
+            },
+          ],
+        },
+      },
+    },
+  })
+
+export const jobHistoryEntityEditScreen = (data) =>
+  Navigation.push('center', {
+    component: {
+      name: JOB_HISTORY_ENTITY_EDIT_SCREEN,
+      passProps: {
+        data,
+      },
+      options: {
+        topBar: {
+          title: {
+            text: 'JobHistories',
+            color: Colors.snow,
+          },
+        },
+      },
+    },
+  })
+
+export const jobHistoryEntityDetailScreen = (data) =>
+  Navigation.push('center', {
+    component: {
+      name: JOB_HISTORY_ENTITY_DETAIL_SCREEN,
+      passProps: {
+        data,
+      },
+      options: {
+        topBar: {
+          title: {
+            text: 'JobHistories',
+            color: Colors.snow,
+          },
+        },
+      },
+    },
+  })
 // ignite-jhipster-navigation-method-needle
