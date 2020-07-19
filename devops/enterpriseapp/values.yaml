@@ -1,0 +1,10 @@
+postgresql:
+  enabled: true
+  postgresqlUsername: enterpriseapp
+  postgresqlDatabase: enterpriseapp
+  master:
+    podAnnotations:
+      sidecar.istio.io/inject: "false"
+  slave:
+    podAnnotations:
+      sidecar.istio.io/inject: "false"
