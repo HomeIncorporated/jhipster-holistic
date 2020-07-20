@@ -1,0 +1,12 @@
+{
+  "generator-jhipster-flutter-merlin": {
+    "promptValues": {
+      "baseName": "enterprise",
+      "packageName": "com.enterprise",
+      "android": "kotlin",
+      "ios": "swift",
+      "stateManageType": "bloc",
+      "nativeLanguage": "en"
+    }
+  }
+}
