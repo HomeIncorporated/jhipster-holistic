@@ -1,0 +1,18 @@
+{
+  "generator-jhipster": {
+    "appsFolders": [
+      "gateway",
+      "main",
+      "uaa"
+    ],
+    "directoryPath": "../../",
+    "serviceDiscoveryType": "eureka",
+    "jwtSecretKey": "YTIyODI4OGU5NDQzNjc0YzMwNjE0NmM1NTY4Y2FmZDBlNmMyMjZlMWRiZjYzMTQ3NDhjYmY5YTc1OTVjMmRkNGZmYTY2YmU4YzczZTJiNThiNDU0ZTgwYTIzYmI1YTliNjQ5NA==",
+    "dockerRepositoryName": "enterprise-app",
+    "dockerPushCommand": "docker push",
+    "kubernetesNamespace": "enterpriseapp",
+    "ingressDomain": "192.168.99.100.nip.io",
+    "monitoring": "elk",
+    "istio": true
+  }
+}
