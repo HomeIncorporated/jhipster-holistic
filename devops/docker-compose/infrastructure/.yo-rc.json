@@ -1,0 +1,13 @@
+{
+  "generator-jhipster": {
+    "appsFolders": [
+      "uaa"
+    ],
+    "directoryPath": "../../../",
+    "gatewayType": "zuul",
+    "monitoring": "elk",
+    "consoleOptions": [],
+    "serviceDiscoveryType": "eureka",
+    "jwtSecretKey": "M2I1ZDAxNGRkY2VjNTk2YTVkZTY4ZTdkZWZkYmE5OGUyZDBjZmVhNDhkNTMzOTU2NWY5ZmQ4YzY2OTEwNWE3ZmFhNjgwOGM1NDY4NTI2MzkzNTJiZGJiNWQ3M2MzNDA3MWM2Zg=="
+  }
+}
